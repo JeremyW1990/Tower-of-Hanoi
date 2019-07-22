@@ -1,10 +1,9 @@
 import React from 'react';
 import './tower.css';
 
-function Tower() {
+function Tower( props ) {
   return (
-    <div className="tower">
-
+    <div className="tower" onClick={()=> props.clicked(props.towerIndex)}>
     </div>
   );
 }
