@@ -19,7 +19,10 @@ class Game extends Component {
 
 const mapStateToProps = state => {
     return {
-        result: state.result
+        towers: state.towers,
+        indexOfTowerHasADiskAbove: state.indexOfTowerHasADiskAbove,
+        sizeOfliftUpDisk: state.sizeOfliftUpDisk,
+
     }
 };
 
