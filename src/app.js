@@ -10,9 +10,7 @@ function App() {
     <div className="app container-fluid">
       <div className="row full-height">
         <div className="game-container col-9 full-height d-flex justify-content-center align-items-center">
-          <div>
             <Game/>
-          </div>
         </div>
         <div className="player-container col-3 full-height">
           player

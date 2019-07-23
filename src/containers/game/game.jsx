@@ -10,7 +10,13 @@ class Game extends Component {
     render () {
         return (
             <div>
-                <Towers clicked={this.props.onChooseATower}/>
+                {this.props.completed ? <div className='mb-5 font-weight-bold'>COMPLETED</div> : null}
+                <Towers 
+                    clicked={this.props.onChooseATower} 
+                    disks={this.props.towers}
+                    liftedTower = {this.props.liftedTower}
+                    liftedDisk = {this.props.liftedDisk}
+                />
                 <Foundation/>
             </div>
         );
@@ -20,9 +26,9 @@ class Game extends Component {
 const mapStateToProps = state => {
     return {
         towers: state.towers,
-        indexOfTowerHasADiskAbove: state.indexOfTowerHasADiskAbove,
-        sizeOfliftUpDisk: state.sizeOfliftUpDisk,
-
+        liftedTower: state.indexOfTowerHasADiskAbove,
+        liftedDisk: state.sizeOfliftUpDisk,
+        completed: state.completed,
     }
 };
 
